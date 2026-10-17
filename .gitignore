@@ -12,3 +12,10 @@
 # 日志与临时文件
 *.log
 *.tmp
+
+# Android / Gradle 构建产物
+build/
+.gradle/
+.kotlin/
+local.properties
+*.apk.transid

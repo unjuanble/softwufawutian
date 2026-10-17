@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  明文流量策略：
+  - 默认仍然禁止明文 HTTP（公网模型接口必须走 https）。
+  - 只对回环地址放开，便于用本机假模型 / 本地代理联调（adb reverse tcp:8899 tcp:8899）。
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false" />
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="false">127.0.0.1</domain>
+        <domain includeSubdomains="false">localhost</domain>
+    </domain-config>
+</network-security-config>
